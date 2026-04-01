@@ -79,6 +79,15 @@ new Chart(ctx, {
             data: [40, 25, 20, 15],
             backgroundColor: ['#007acc','#00b894','#fdcb6e','#e17055']
         }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
     }
 });
 </script>
