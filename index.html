@@ -1,33 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>Rajkumar Selvaraj | Senior Data Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <div class="chart-wrapper">
-        <canvas id="myPieChart"></canvas>
+
+<header>
+    <h1>Rajkumar Selvaraj</h1>
+    <p class="subtitle">Senior Manager | Data Engineering | ETL | Cloud | AI</p>
+    <p>📍 New Jersey, USA | 📧 Rajkumar.Selvaraj@exlservice.com</p>
+</header>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        Experienced ETL Senior Manager with 15+ years in Data Warehousing,
+        Big Data, Cloud Architecture and AI-driven analytics.
+        Passionate about building scalable enterprise data solutions
+        that drive measurable business impact.
+    </p>
+</section>
+
+<section class="skills">
+    <h2>Skill Distribution</h2>
+    <div class="chart-container">
+        <canvas id="skillChart"></canvas>
     </div>
-    <script>
-        const ctx = document.getElementById('myPieChart').getContext('2d');
-        const myPieChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4'],
-                datasets: [{
-                    data: [10, 20, 30, 40],
-                    backgroundColor: ['red', 'blue', 'yellow', 'green'],
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                // More options can be added as per your needs
+</section>
+
+<section>
+    <h2>Core Technologies</h2>
+    <ul class="tech-list">
+        <li>Ab Initio, Express>IT (ACE/BRE)</li>
+        <li>Oracle, Teradata, MongoDB, AWS S3</li>
+        <li>Python, SQL, PL/SQL, Shell Scripting</li>
+        <li>Hadoop, Spark, Kafka</li>
+        <li>Jenkins, Autosys, Tivoli</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+        <h3>Senior Manager – EXL (2024–Present)</h3>
+        <p>
+            Leading Bulk Ab Initio module, enterprise data replication
+            (Oracle → Db2, MongoDB → Db2), automation using Python,
+            and scalable data architecture strategy.
+        </p>
+    </div>
+
+    <div class="job">
+        <h3>Senior Consultant – Incandescent Technologies (2016–2024)</h3>
+        <p>
+            Technical lead for ETL design, cross-functional architecture,
+            QA/Production support, and enterprise-grade data systems.
+        </p>
+    </div>
+
+    <div class="job">
+        <h3>Assistant Manager – Citibank (2015–2016)</h3>
+        <p>
+            Led regional EMEA projects, UAT batch control,
+            defect management, and end-to-end release execution.
+        </p>
+    </div>
+
+</section>
+
+<section>
+    <h2>Education</h2>
+    <p>B.Tech (Information Technology), Anna University – 2009</p>
+</section>
+
+<footer>
+    <p>© 2026 Rajkumar Selvaraj</p>
+</footer>
+
+<script>
+const ctx = document.getElementById('skillChart').getContext('2d');
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [
+            'ETL & Data Warehousing',
+            'Cloud & Big Data',
+            'Python & SQL',
+            'AI & Emerging Tech'
+        ],
+        datasets: [{
+            data: [40, 25, 20, 15],
+            backgroundColor: [
+                '#007acc',
+                '#00b894',
+                '#fdcb6e',
+                '#e17055'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom'
             }
-        });
-    </script>
+        }
+    }
+});
+</script>
+
 </body>
 </html>
