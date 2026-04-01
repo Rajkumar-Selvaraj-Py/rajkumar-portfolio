@@ -1,32 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>Rajkumar Selvaraj | Senior Data Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
-        <a href="download.pdf" id="downloadBtn">Download CV</a>
-    </header>
-    <main>
-        <section id="professionalMetrics">
-            <h2>Professional Metrics</h2>
-            <p>Years of Experience: 5</p>
-            <p>Projects Completed: 30+</p>
-            <p>Skills: JavaScript, Python, HTML, CSS</p>
-        </section>
-        <section id="skillsChart">
-            <h2>Skills Pie Chart</h2>
-            <canvas id="skillsPieChart"></canvas>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Rajkumar Selvaraj</p>
-    </footer>
+
+<header>
+    <h1>Rajkumar Selvaraj</h1>
+    <p>Senior Manager | Data Engineering | ETL | Cloud | AI</p>
+    <p>📍 New Jersey, USA | 📧 Rajkumar.Selvaraj@exlservice.com</p>
+</header>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        Experienced ETL Senior Manager with 15+ years in Data Warehousing,
+        Big Data, Cloud Architecture and AI-driven analytics.
+        Passionate about building scalable enterprise data solutions.
+    </p>
+</section>
+
+<section class="skills">
+    <h2>Skill Distribution</h2>
+    <canvas id="skillChart"></canvas>
+</section>
+
+<section>
+    <h2>Core Technologies</h2>
+    <ul>
+        <li>Ab Initio, Express>IT (ACE/BRE)</li>
+        <li>Oracle, Teradata, MongoDB, AWS S3</li>
+        <li>Python, SQL, PL/SQL, Shell Scripting</li>
+        <li>Hadoop, Spark, Kafka</li>
+        <li>Jenkins, Autosys, Tivoli</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+        <h3>Senior Manager – EXL (2024–Present)</h3>
+        <p>Leading Bulk Ab Initio module, data replication (Oracle → Db2, MongoDB → Db2),
+           automation using Python and enterprise data strategy.</p>
+    </div>
+
+    <div class="job">
+        <h3>Senior Consultant – Incandescent Technologies (2016–2024)</h3>
+        <p>Technical lead, ETL design, QA/Production support, enterprise data architecture.</p>
+    </div>
+
+    <div class="job">
+        <h3>Assistant Manager – Citibank (2015–2016)</h3>
+        <p>Regional EMEA project leadership, UAT batch control, defect management.</p>
+    </div>
+
+</section>
+
+<section>
+    <h2>Education</h2>
+    <p>B.Tech (Information Technology), Anna University – 2009</p>
+</section>
+
+<footer>
+    <p>© 2026 Rajkumar Selvaraj</p>
+</footer>
+
+<script>
+const ctx = document.getElementById('skillChart').getContext('2d');
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['ETL & Data Warehousing', 'Cloud & Big Data', 'Python & SQL', 'AI & Emerging Tech'],
+        datasets: [{
+            data: [40, 25, 20, 15],
+            backgroundColor: ['#007acc','#00b894','#fdcb6e','#e17055']
+        }]
+    }
+});
+</script>
+
 </body>
 </html>
